@@ -84,10 +84,10 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'dfvq9grbbg5t3i',
-        'USER': 'muowsdlxlnizif',
-        'PASSWORD': '8a533bac201c62b98a7a39325663ca92fdeefa94a3d0beaa87100bd8e64db90d',
-        'HOST': 'ec2-54-163-227-202.compute-1.amazonaws.com',
+        'NAME': 'd9va6ru431j701',
+        'USER': 'hgsbcovdjrbyom',
+        'PASSWORD': 'f6a363a1bf6938780c2677e17d7118ebd6367b7993714d08fb5b2ee4ee49038c',
+        'HOST': 'ec2-54-221-207-138.compute-1.amazonaws.com',
         'PORT': '5432',
 
     }
@@ -145,6 +145,10 @@ STATICFILES_DIRS = (
 db_from_env = dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(db_from_env)
 
+# Simplified static file serving.
+# https://warehouse.python.org/project/whitenoise/
+
+STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
 
 
